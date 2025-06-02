@@ -4,7 +4,7 @@ import com.codeborne.selenide.*;
 import static com.codeborne.selenide.Condition.visible;
 
 /**
- * Базовый &laquo;декоратор&raquo; для любого UI-элемента.
+ * Базовый декоратор для любого UI-элемента.
  */
 public class UiElement {
 
@@ -14,7 +14,7 @@ public class UiElement {
         this.el = el;
     }
 
-    /* ---------- fluent-API ---------- */
+
 
     public UiElement shouldBeVisible() {
         el.shouldBe(visible);

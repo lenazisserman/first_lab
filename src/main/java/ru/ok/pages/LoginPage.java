@@ -28,13 +28,13 @@ public class LoginPage extends BasePage<LoginPage> {
         return emailInput.element();
     }
 
-    /* ----------- действия / chain‑методы ----------- */
+    /* ----------- действия ----------- */
 
     public LoginPage enterLogin(String login)       { emailInput.clearAndType(login); return this; }
     public LoginPage enterPassword(String password) { passwordInput.clearAndType(password); return this; }
     public LoginPage submit()                       { submitBtn.click();              return this; }
 
-    /** Полный happy‑path логин. */
+
     public MainPage loginAs(Credentials cred) {
         return enterLogin(cred.login())
                 .enterPassword(cred.password())
